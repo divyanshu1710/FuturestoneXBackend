@@ -14,8 +14,10 @@ public class Blog {
     @Column(nullable = false)
     private String title;
 
-    @Column(length = 1000)
+    @Lob
+    @Column(columnDefinition = "TEXT") 
     private String description;
+
 
     @Lob
     private byte[] image;
